@@ -9,7 +9,7 @@ Go to my repo https://github.com/Zuprocj?tab=repositories and clone TriviaGame r
 or use this link to clone repo  https://github.com/Zuprocj/TriviaGame 
 
 Also TriviaGame is deployed onto Github Pages.
-https://zuprocj.github.io/TriviaGame
+https://zuprocj.github.io/TriviaGame/
 
 # Built with
 HTML
