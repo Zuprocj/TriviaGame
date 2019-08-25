@@ -18,10 +18,6 @@ var questions = [{
     answers: ["Bulbasaur", "Squirtle", "Weedle", "Charmander"],
     correctAnswer: "Bulbasaur"
 }, {
-    question:" What must you get at the PokeMart at Viridian City and deliver to Professor Oak in order to progess past Viridian City?",
-    answers: ["Oak's Package", "Oak's Delivery", "Oak's Mail", "Oak's Parcel"],
-    correctAnswer: "Oak's Parcel"
-}, {
     question:"Which of these Pokemon can be found in Viridian Forest?",
     answers: ["Pinsir", "Pikachu", "Butterfree", "Geodude"],
     correctAnswer: "Pikachu"
@@ -29,10 +25,6 @@ var questions = [{
     question:"What cave must you go through in order to reach Cerulean City?",
     answers: ["Mt. Morter", "Mt. Moon", "Mt. Silver", "Rock Tunnel"],
     correctAnswer: "Mt. Moon"
-}, {
-    question: "Who gives you HM01 on the SS Anne?",
-    answers: ["Your Rival", "A Sailor", "A man who lost his grand-daughter", "The Captain"],
-    correctAnswer: "The Captain"
 }, {
     question:"After you pass through Rock Tunnel, you get to what city?",
     answers: ["Lavender Town", "Brassgold City", "Fuschia City", "Indigo Town"],
@@ -60,12 +52,12 @@ var game = {
     },
     start: function(){
         timer = setInterval(game.countdown,1000);
-        $("#subwrapper").prepend("<h2>Time Remaing: <span id='counter'>45</span> Seconds</h2>");
+        $("#subwrapper").prepend("<br><h2>Time Remaing: <span id='counter'>45</span> Seconds</h2><br><br>");
         $("#start").remove();
         for (var i=0;i<questions.length;i++){
-            $("#subwrapper").append("<h2>" + questions[i].question+ "</h2>");
+            $("#subwrapper").append("<br><h2>" + questions[i].question+ "</h2>");
             for (var j=0;j<questions[i].answers.length;j++){
-            $("#subwrapper").append("<input type='radio' name='question-" +i+ "' value='"+questions[i].answers[j]+"'>"+ questions[i].answers[j])
+            $("#subwrapper").append("<br><input type='radio' name='question-" +i+ "' value='"+questions[i].answers[j]+"'>"+ questions[i].answers[j])
             }
         }
         $("#subwrapper").append("<br><br><button id='end'>DONE!</button>");
@@ -78,7 +70,7 @@ var game = {
             game.incorrect++;
         }
     });
-    $.each($('input[name="question-1"]:checked'), function(){
+    $.each($("input[name='question-1']:checked"), function(){
         if($(this).val()==questions[1].correctAnswer){
             game.correct++;
         }else {
@@ -122,20 +114,6 @@ var game = {
     });
     $.each($("input[name='question-7']:checked"), function(){
         if($(this).val()==questions[7].correctAnswer){
-            game.correct++;
-        }else {
-            game.incorrect++;
-        }
-    });
-    $.each($("input[name='question-8']:checked"), function(){
-        if($(this).val()==questions[8].correctAnswer){
-            game.correct++;
-        }else {
-            game.incorrect++;
-        }
-    });
-    $.each($("input[name='question-9']:checked"), function(){
-        if($(this).val()==questions[9].correctAnswer){
             game.correct++;
         }else {
             game.incorrect++;

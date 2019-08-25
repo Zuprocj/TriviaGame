@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: palegoldenrod;
+    background: url("../images/pokemon-phone-background.jpg");
+}
+#wrapper{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 25px 0 25px;
+    margin-top: 25px;
+    background: url("../images/dark-honeycomb.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#subwrapper{
+    color: whitesmoke;
+    letter-spacing: 2px;
+}
+button {
+    background-color: yellow;
+    border: none;
+    color: black;
+}
+input[type="radio"]{
+    margin: 0 10px 0 10px;
+  }
+h2{
+    color: whitesmoke;
+    font-size: 24px;
+}
+h1{
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-stretch: semi-expanded;
+    font-size: 42px;
+}
+
